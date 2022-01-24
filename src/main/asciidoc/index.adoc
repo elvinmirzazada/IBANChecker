@@ -1,0 +1,29 @@
+= Luminor IBAN checker REST Docs
+
+This is an example output for a service running at http://localhost:8080:
+
+== Single IBAN validator
+
+.request
+include::{snippets}/testValidateIBAN/http-request.adoc[]
+
+.response
+include::{snippets}/testValidateIBAN/http-response.adoc[]
+
+== Multiple IBANs validator
+
+.request
+include::{snippets}/testValidateMultiIBANs/http-request.adoc[]
+
+.response
+include::{snippets}/testValidateMultiIBANs/http-response.adoc[]
+
+== Get All IBAN History
+
+.request
+include::{snippets}/testListOfAllIbans/http-request.adoc[]
+
+.response
+include::{snippets}/testListOfAllIbans/http-response.adoc[]
+
+As you can see the format is very simple, and in fact you always get the same message.

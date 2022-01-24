@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="app">
+    <div>
+        <input id="singleIban" v-model="iban" placeholder="BG18RZBB91550123456789">
+        <input v-on:click="check_single_iban" type="button" value="Check IBAN"/>
+        <p>{{ single_iban_is_valid }}</p>
+    </div>
+
+    <div id="multi">
+        <textarea v-model="multi_ibans" placeholder="BG18RZBB91550123456789" ></textarea>
+        <input v-on:click="check_multi_iban" type="button" value="Check IBAN"/>
+        <ul>
+            <li v-for="(val, key) in multi_ibans_response">
+                {{ key }} {{ val }}
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <a href="/history" >
+            <input type="button" value="History of Search"/>
+        </a>
+    </div>
+</div>
+<script src="js/functions.js"></script>
+</body>
+</html>

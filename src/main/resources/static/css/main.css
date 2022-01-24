@@ -1,0 +1,8 @@
+#multi textarea {
+    min-height: 100px;
+    min-width: 250px;
+}
+
+#app #singleIban {
+    min-width: 250px;
+}

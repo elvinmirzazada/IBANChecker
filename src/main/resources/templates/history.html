@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History of IBAN search</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="history">
+    <select v-model="selectedFilter" @change="get_list_of_ibans()">
+        <option v-for="item in filters" :value="item">{{item}}</option>
+    </select>
+
+    <ul>
+        <li v-for="(val, key) in history_list">
+            {{ key }} {{ val }}
+        </li>
+    </ul>
+    <div>
+        <a href="/">
+            <input type="button" value="Back to Validation"/>
+        </a>
+    </div>
+
+    <script src="js/history.js"></script>
+</div>
+</body>
+</html>
